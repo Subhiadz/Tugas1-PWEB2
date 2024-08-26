@@ -4,9 +4,9 @@ Jobsheet ini bertujuan untuk membantu mahasiswa memahami dan mengimplementasikan
 
 ## Penulis
 Nama: Muhamad Subhi Adzani  
+NIM: 230202017
 Mahasiswa Politeknik Negeri Cilacap  
 Program Studi Teknik Informatika
-NIM: 230202017
 
 ## Penjelasan pembuatan Class dan Object
 
