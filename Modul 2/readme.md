@@ -1,12 +1,12 @@
-# Jobsheet Modul 1 Pertemuan 1 & 2
+# Jobsheet Modul 2 Pertemuan 1 & 2
 
 Jobsheet ini bertujuan untuk membantu mahasiswa memahami dan mengimplementasikan konsep dasar `Object-Oriented Programming (OOP)` dalam pemrograman PHP. Mahasiswa akan belajar `cara membuat class, objek`, serta menerapkan prinsip-prinsip OOP seperti `Encapsulation`, `Inheritance`, `Polymorphism`, dan `Abstraction`.
 
 ## Penulis
 Nama: Muhamad Subhi Adzani  
-Mahasiswa Politeknik Negeri Cilacap  
-Program Studi Teknik Informasi  
 NIM: 230202017
+Mahasiswa Politeknik Negeri Cilacap  
+Program Studi Teknik Informatika  
 
 ## Penjelasan pembuatan Class dan Object
 
