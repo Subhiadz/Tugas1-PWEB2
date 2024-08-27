@@ -6,7 +6,11 @@ Jobsheet ini bertujuan untuk membantu mahasiswa memahami dan mengimplementasikan
 Nama: Muhamad Subhi Adzani  
 NIM: 230202017
 Mahasiswa Politeknik Negeri Cilacap  
+<<<<<<< HEAD:Modul 2/readme.md
 Program Studi Teknik Informatika  
+=======
+Program Studi Teknik Informatika
+>>>>>>> 7bb800813367d301aba1b81bb9e91224f4d2e866:Modul 1/readme.md
 
 ## Penjelasan pembuatan Class dan Object
 
