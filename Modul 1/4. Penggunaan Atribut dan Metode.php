@@ -20,7 +20,7 @@ class Mahasiswa {
 
     // Metode atau Function
     public function tampilkanData() {
-        return "Mahasiswa ini bernama $this->nama dengan NIM: $this->nim Jurusan: $this->jurusan.";
+        return "Mahasiswa ini bernama $this->nama dengan NIM: $this->nim dari Jurusan: $this->jurusan.";
     }
 
     // Metode untuk mengupdate jurusan

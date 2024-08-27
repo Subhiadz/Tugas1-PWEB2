@@ -14,7 +14,7 @@ class Dosen {
     }
     // Metode atau Function
     public function tampilkanData() {
-        return "Dosen ini bernama $this->nama dengan nip: $this->nip mengajar matakuliah $this->matakuliah. pada semester 3";
+        return "Dosen ini bernama $this->nama dengan NIP: $this->nip mengajar Matakuliah $this->matakuliah. pada semester 3";
     }
 }
 // Instansiasi Objek
