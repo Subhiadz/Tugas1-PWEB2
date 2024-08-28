@@ -472,7 +472,7 @@ class Mahasiswa extends Person {
     }
 }
 ```
-### 2. Kelas Abstrak Jurnal  
+### 4. Kelas Abstrak Jurnal  
 Kelas `Jurnal` adalah kelas abstrak yang mendefinisikan metode `submit` yang harus diimplementasikan oleh kelas turunannya.
 
 ```php
@@ -486,7 +486,7 @@ abstract class Jurnal {
     abstract public function submit();
 }
 ```
-### 2. Kelas jurnalDosen dan JurnalMahasiswa 
+### 5. Kelas jurnalDosen dan JurnalMahasiswa 
 Kelas `JurnalDosen` dan `JurnalMahasiswa` adalah kelas turunan dari `Jurnal` yang mengimplementasikan metode `submit` untuk pengajuan jurnal.
 
 ```php
