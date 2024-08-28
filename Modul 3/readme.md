@@ -389,7 +389,126 @@ echo $offlineCourse->getCourseDetails();
 Online Course: Praktikum Pemrograman WEB (Kode: PWEB), Via: Google Meet
 Offline Course: Struktur Basis Data (Kode: STD), Tempat: Lab Cisco, Lantai 4, Gedung GTIL
 ```
+## Tugas   
+Pada Tugas ini yaitu konsep Pemrograman Berorientasi Objek (OOP) dalam PHP dengan menggunakan kelas, enkapsulasi, pewarisan, dan metode abstrak. Kode ini mendemonstrasikan bagaimana kelas `Person` digunakan sebagai kelas induk untuk `Dosen` dan `Mahasiswa`, serta bagaimana kelas abstrak `Jurnal` digunakan untuk menangani pengajuan jurnal oleh dosen dan mahasiswa.
+1. **Pewarisan**
+   - Kelas `Dosen` mewarisi dari kelas `Person`. Ini berarti bahwa `Dosen` akan memiliki semua metode dan properti yang ada di `Person`, kecuali jika mereka ditandai sebagai `private`.
 
+2. **Properti dan Metode Baru**
+   - **Properti `nidn`**: Ditambahkan untuk menyimpan Nomor Induk Dosen Nasional.
+   - **Metode `__construct($name, $nidn)`**: Konstruktor ini memanggil konstruktor dari kelas induk `Person` untuk mengatur nama dan juga mengatur `nidn`.
+   - **Metode `getRole()`**: Di-override dari kelas induk `Person` untuk mengembalikan string "Dosen", yang menunjukkan bahwa objek ini adalah seorang dosen.
+   - **Metode `getNidn()`**: Mengembalikan nilai dari properti `nidn`.
+   - **Metode `setNidn($nidn)`**: Mengatur nilai dari properti `nidn`.
+
+## Struktur Kode
+
+### 1. Kelas Person
+
+Kelas `Person` adalah kelas dasar yang memiliki properti `name` dan metode untuk mendapatkan nama serta peran dari objek tersebut.
+
+```php
+class Person {
+    protected $name;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getRole() {
+        return "Unknown Role";
+    }
+}
+```
+### 2. Kelas Dosen  
+Kelas `Dosen` mewarisi dari `Person` dan menambahkan properti `nidn`. Kelas ini juga mengoverride metode `getRole` untuk memberikan peran khusus sebagai dosen.
+```php
+class Dosen extends Person {
+    private $nidn;
+
+    public function __construct($name, $nidn) {
+        parent::__construct($name);
+        $this->nidn = $nidn;
+    }
+
+    public function getRole() {
+        return "Dosen";
+    }
+
+    public function getNidn() {
+        return $this->nidn;
+    }
+
+    public function setNidn($nidn) {
+        $this->nidn = $nidn;
+    }
+}
+```
+### 3. Kelas Mahasiswa
+Kelas `Mahasiswa` juga mewarisi dari `Person` dan menambahkan properti `nim`. Metode `getRole` diubah untuk menunjukkan peran sebagai mahasiswa.
+```php
+class Mahasiswa extends Person {
+    private $nim;
+
+    public function __construct($name, $nim) {
+        parent::__construct($name);
+        $this->nim = $nim;
+    }
+
+    public function getRole() {
+        return "Mahasiswa";
+    }
+
+    public function getNim() {
+        return $this->nim;
+    }
+
+    public function setNim($nim) {
+        $this->nim = $nim;
+    }
+}
+```
+### 2. Kelas Abstrak Jurnal  
+Kelas `Jurnal` adalah kelas abstrak yang mendefinisikan metode `submit` yang harus diimplementasikan oleh kelas turunannya.
+
+```php
+abstract class Jurnal {
+    protected $judul;
+
+    public function __construct($judul) {
+        $this->judul = $judul;
+    }
+
+    abstract public function submit();
+}
+```
+### 2. Kelas jurnalDosen dan JurnalMahasiswa 
+Kelas `JurnalDosen` dan `JurnalMahasiswa` adalah kelas turunan dari `Jurnal` yang mengimplementasikan metode `submit` untuk pengajuan jurnal.
+
+```php
+class JurnalDosen extends Jurnal {
+    public function submit() {
+        return "Jurnal Dosen dengan judul '{$this->judul}' telah diajukan.";
+    }
+}
+
+class JurnalMahasiswa extends Jurnal {
+    public function submit() {
+        return "Jurnal Mahasiswa dengan judul '{$this->judul}' telah diajukan.";
+    }
+}
+```
+## Output Program
+```bash
+Pak Riyadi adalah Dosen dengan NIDN: 1796352
+Subhi adalah Mahasiswa dengan NIM: 230202017
+Jurnal Dosen dengan judul 'Penelitian AI' telah diajukan.
+Jurnal Mahasiswa dengan judul 'Studi Kasus RPL' telah diajukan.
+```
 
 ## License
 Pull requests are welcome. For major changes, please open an issue first
